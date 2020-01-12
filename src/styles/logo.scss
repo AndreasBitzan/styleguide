@@ -1,0 +1,11 @@
+.logo-content{
+    &__logo-img-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    &__logo-img{
+        background-color: $main-background;
+        max-width: 200px;
+        border-radius: 10px;
+    }
+}

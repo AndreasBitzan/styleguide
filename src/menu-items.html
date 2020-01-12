@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:500|Ubuntu&display=swap" rel="stylesheet"> 
+    <title>What to eat - Styleguide</title>
+</head>
+<body>
+    <%= require('../node_modules/html-loader!./partials/_header.html') %>
+   
+     <main class="content">
+        <div class="menubar">
+            <%= require('../node_modules/html-loader!./partials/_menu.html') %>
+         </div>
+         <div class="main-content">
+           <h1>Menu Items</h1>
+           <p>The menu items are the relevant information for the customer. We use many of them as they appear for each dish in the side menu.</p>
+           <div class="menu-item">
+               <div class="menu-item__photo">
+                   
+               </div>
+               <div class="menu-item__name">
+                   <h2>Cheeseburger</h2>
+               </div>
+               <div class="menu-item__description">
+                   <p>Pommes als Beilage</p>
+               </div>
+               <div class="menu-item__price">
+                   <p>4€</p>
+               </div>
+               <button class="menu-item__add-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg></button>
+            </div>
+            <p>The following styling information are important</p>
+            <ul>
+                <li>The image makes up a quarter of the total width.</li>
+                <li>The image covers the whole height of the menu item.</li>
+                <li>The name of the dish is a h2 heading.</li>
+                <li>The whole item is clickable and takes you to the page with more detailed information about the dish.</li>
+                <li>The green plus button adds the dish directly to the shopping cart.</li>
+            </ul>
+         </div>
+     </main>
+     <%= require('../node_modules/html-loader!./partials/_footer.html') %>
+</body>
+</html>

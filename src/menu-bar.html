@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:500|Ubuntu&display=swap" rel="stylesheet"> 
+    <title>What to eat - Menu bar</title>
+</head>
+<body>
+    <%= require('../node_modules/html-loader!./partials/_header.html') %>
+   
+     <main class="content">
+        <div class="menubar">
+            <%= require('../node_modules/html-loader!./partials/_menu.html') %>
+         </div>
+         <div class="main-content">
+           <h1>The Menu Bar</h1>
+           <p>The menu bar is visible on every screen except for the welcome screen. It features the following rules:</p>
+           <ul>
+               <li>The icons are from <a href="https://fontawesome.com/">Fontawesome</a> and must not exceed 50x50px!</li>
+               <li>The space between is evenly which is guaranteed by flexbox!</li>
+               <li>It features a padding of 1rem!</li>
+               <li>Since the project is designed for touch devices, there is no hover effect, but a click effect!</li>
+               <li>The background must be transparent, it is only blue for better visibility here !</li>
+               <li>If there is additional information on the icons, like on how many items are in the shopping cart for example. it must 
+                   be displayed via a small green bubble containing the information. This can be seen in the example below.
+               </li>
+           </ul>
+           <div class="menu-bar">
+            <a href="#" class="menu-bar__item menu-bar__icon-wrapper"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></a>
+            <a href="#" class="menu-bar__item menu-bar__icon-wrapper"><svg aria-hidden="true" focusable="false" data-prefix="fas" 
+                data-icon="shopping-cart" class="svg-inline--fa fa-shopping-cart fa-w-18" 
+                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
+            <span class="menu-bar__item__counter">1</span></a>
+            <a href="#" class="menu-bar__item"><img src="./img/LogoIdeaWhite.png" alt="The What to eat logo, takes you to index.html"></a>
+           </div>
+           <h2>The SCSS Ruleset</h2>
+           <p>The menu features a fixed SCSS ruleset, it can be seen below.</p>
+           <pre>
+            <code>
+    .menu-bar{
+        display: flex;
+        justify-content: space-between;
+        
+        background-color: $main-background;
+        border: solid lightgray 2px;
+    
+        padding: 1rem;
+    
+        &__icon-wrapper{
+            background-color: $header-background;
+        }
+    
+        &__item{
+            position: relative;
+            height: 80px;
+            width: 80px;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            color: white;
+            
+            &__counter{
+                position: absolute;
+                bottom: -5px;
+                right: -15px;
+    
+                display: block;
+    
+                border-radius: 50%;
+    
+                background-color: $button-green;
+    
+                padding-top: 5px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+            }
+    
+            svg{
+                width: 50px;
+                height: 50px;
+            }
+            img{
+                max-width: 80px;
+    
+                padding: 0;
+            }
+            a{
+                color: white;
+            }
+            &:active{
+                transform: scale(1.2); 
+            }
+        }
+    }
+            </code>
+        </pre>
+         </div>
+     </main>
+     <%= require('../node_modules/html-loader!./partials/_footer.html') %>
+</body>
+</html>

@@ -1,0 +1,81 @@
+.menu-item {
+    display: flex;
+    height: 175px;
+    width: 550px;
+    border: solid 2px lightgray;
+
+    &__photo {
+        position: relative;
+        background-image: url("./../img/cheeseburger.jpg");
+        background-size: cover;
+        width: 175px;
+    }
+
+    &__name {
+        position: relative;
+        height: 20%;
+        left: 50px;
+    }
+
+    &__description {
+        position: relative;
+        height: 20%;
+        top: 90px;
+        right: 90px;
+    }
+
+    &__price {
+        position: relative;
+        height: 20%;
+        top: 20px;
+        font-weight: bold;
+    }
+
+    &__add-button {
+        text-align: center;
+        justify-content: center;
+
+        position: relative;
+        top: 90px;
+        right: 20px;
+
+        height: 65px;
+        width: 65px;
+        border: 0px;
+        border-radius: 15%;
+
+        cursor: pointer;
+
+        color: white;
+        background-color: $button-green;
+    
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+        img {
+            max-width: 80px;
+    
+            padding: 0;
+        }
+        a {
+            color: white;
+        }
+        &:active {
+            transform: scale(1.2); 
+        }
+    }
+
+    &__add-button:hover {
+        border: 1px solid;
+        border-color: $button-green;
+        
+        color: $button-green;
+        background-color: white;
+    }
+
+}
+
+.menu-item:hover {
+    box-shadow: 0 0 15px grey;
+}

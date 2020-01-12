@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:500|Ubuntu&display=swap" rel="stylesheet"> 
+    <title>What to eat - Styleguide</title>
+</head>
+<body>
+    <%= require('../node_modules/html-loader!./partials/_header.html') %>
+   
+     <main class="content">
+        <div class="menubar">
+            <%= require('../node_modules/html-loader!./partials/_menu.html') %>
+         </div>
+         <div class="main-content">
+            <section class="page-layout">
+                <h1>Menu Screen Layout</h1>
+                <p>The general menu screen is also devided into segments. The side menu, where the actual dishes can be seen and selected uses 2 fifths
+                    of the total screen width, whereas the filter screen uses 3/5 of the total width.
+                </p>
+                <p>The right part is refreshed and reloaded everytime something happens in the left part</p>
+                <h2>The Menu Bar</h2>
+                <p>The menu bar consits out of three 50x50px icons, which are:</p>
+                <ul>
+                    <li>A back button which takes you to whatever screen you visited before</li>
+                    <li>The shopping cart, which takes you to your current order</li>
+                    <li>The logo, which takes you to the welcome and starting page</li>
+                </ul>
+                <p>The icons are all equally spread out via justify-content: space-between;</p>
+                <p>The total height of the menu bar, as well as the height of the heading of the side menu is 90px!</p>
+                    <div class="page-layout__image-wrapper">
+                        <img src="./img/menu.jpg" alt="The welcome screen of what to eat">
+                    </div>
+            </section>
+         </div>
+     </main>
+     <%= require('../node_modules/html-loader!./partials/_footer.html') %>
+</body>
+</html>

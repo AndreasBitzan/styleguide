@@ -1,0 +1,32 @@
+.colors {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    
+    &__main-color {
+        color: white;
+        background-color: $main-background;
+        width: 150px;
+        height: 150px;
+    }
+
+    &__secondary-color {
+        color: white;
+        background-color: $header-background;
+        width: 150px;
+        height: 150px;
+    }
+
+    &__highlight-color {
+        color: white;
+        background-color: $main-highlight;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.color-heading {
+    h3 {
+        font-family: $headings-font;
+    }
+}

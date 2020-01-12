@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:500|Ubuntu&display=swap" rel="stylesheet"> 
+    <title>What to eat - Styleguide</title>
+</head>
+<body>
+    <%= require('../node_modules/html-loader!./partials/_header.html') %>
+   
+     <main class="content">
+        <div class="menubar">
+            <%= require('../node_modules/html-loader!./partials/_menu.html') %>
+         </div>
+         <div class="main-content">
+           <h1>Introduction</h1>
+           <p><strong>What to eat</strong> is a modern, lightweight menu application, which allows you to 
+            filter restaurant menues by choosing certain ingredients, allergies or diets. </p>
+            <p>With a few simple taps, you can avoid annoying, complex menu-cards and directly find your desired food, or even search for flavours, ingredients, names and more... </p>
+
+            <h2>Main points</h2>
+            <ul>
+                <li>
+                   As the whole app is based on portable menu cards, our styleguide is focused on working with tablets (e.g. iPads, Galaxy Tablets, etc.) that can be found in restaurants.
+                </li>
+                <li>
+                    The purpose of our app is to make it easier for the customer to read the menu and search for desired foods based off of allergies, diets, flavors, and names of foods.
+                </li>
+                <li>
+                    Our styleguide is designed for the use of restaurants who want to start using technology within their restaurant.
+                </li>
+            </ul>
+         </div>
+     </main>
+     <%= require('../node_modules/html-loader!./partials/_footer.html') %>
+</body>
+</html>
